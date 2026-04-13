@@ -1,0 +1,73 @@
+======================================================================
+SYNTHETIC TRAIN DELAY DATA STATISTICS
+======================================================================
+
+1. DATASET OVERVIEW
+----------------------------------------------------------------------
+Total Records: 5,922,676
+Date Range: 2025-01-01 to 2026-01-31
+Total Days: 396
+Average Trains per Day: 14956
+
+2. DELAY STATISTICS
+----------------------------------------------------------------------
+Trains with Delays: 709,076 (11.97%)
+On-time Trains: 5,213,600 (88.03%)
+Average Delay (all): 1.21 minutes
+Average Delay (delayed only): 10.12 minutes
+Median Delay (delayed only): 4 minutes
+Max Delay: 180 minutes
+
+3. TRAIN TYPE DISTRIBUTION
+----------------------------------------------------------------------
+  TER            : 2,990,018 trains (50.48%)
+  TGV            : 1,784,166 trains (30.12%)
+  Transilien     : 1,148,492 trains (19.39%)
+
+4. DELAY CAUSES DISTRIBUTION
+----------------------------------------------------------------------
+  Gestion du trafic                       : 130,491 (18.40%)
+  Infrastructure et travaux               : 107,522 (15.16%)
+  Gestion des gares                       : 101,092 (14.26%)
+  Matériel roulant                        : 83,367 (11.76%)
+  Affluence/correspondances               : 83,186 (11.73%)
+  Météo (intempéries)                     : 67,030 ( 9.45%)
+  Obstacles/intrusions                    : 59,087 ( 8.33%)
+  Mouvements sociaux/grèves               : 41,786 ( 5.89%)
+  Cause inconnue                          : 35,515 ( 5.01%)
+
+5. PASSENGER STATISTICS
+----------------------------------------------------------------------
+Total Passengers: 1,955,268,560
+Average per Train: 330
+Min per Train: 52
+Max per Train: 810
+
+6. PASSENGER-DELAY IMPACT
+----------------------------------------------------------------------
+Passengers on Delayed Trains: 234,281,214
+Percentage of Total: 11.98%
+Person-minutes of Delay: 2,371,000,097
+
+7. TEMPORAL DISTRIBUTION
+----------------------------------------------------------------------
+Peak Delay Hours:
+  16:00 - 16:59: 39,698 delayed trains
+  05:00 - 05:59: 39,558 delayed trains
+  17:00 - 17:59: 39,553 delayed trains
+  12:00 - 12:59: 39,513 delayed trains
+  20:00 - 20:59: 39,490 delayed trains
+
+8. TOP AFFECTED ROUTES
+----------------------------------------------------------------------
+   1. Issoire                        (Line 838000):     10 delays
+   2. Saint-Pierre-sur-Dives         (Line 838000):     10 delays
+   3. Le Creusot - Montceau-les-Mines - Montchanin TGV (Line 686000):      9 delays
+   4. Rochy-Condé                    (Line 838000):      9 delays
+   5. Verneuil-l'Étang               (Line 736000):      9 delays
+   6. Voreppe                        (Line 838000):      9 delays
+   7. Bandol                         (Line 732000):      8 delays
+   8. Don - Sainghin                 (Line 838000):      8 delays
+   9. Hachette                       (Line 838000):      8 delays
+  10. Laval-de-Cère                  (Line 838000):      8 delays
+

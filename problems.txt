@@ -1,0 +1,22 @@
+
+***********************************
+*** IDEAS FOR POTENTIAL STUDIES ***
+***********************************
+
+
+
+* Delay due to a breakdown => a study on the propagation of breakdown in a network: a case on the French network 
+
+* Descriptive statistics on the network ? Analysis on customers flows
+
+* 
+
+
+** Data: 
+********
+
+
+* Stations of travlers: https://data.sncf.com/explore/dataset/gares-de-voyageurs/information/?disjunctive.segment_drg&sort=nom&location=6,46.90345,1.85189&basemap=jawg.transports
+
+* Lines: https://data.sncf.com/explore/dataset/formes-des-lignes-du-rfn/map/?basemap=63a416&location=6,46.40756,5.57007
+

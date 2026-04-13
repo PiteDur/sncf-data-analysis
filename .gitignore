@@ -1,0 +1,78 @@
+# SNCF Railway Network Analysis - .gitignore file
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Data files (large, better to regenerate)
+*.parquet
+*.feather
+*.pkl
+data/synthetic/*.csv
+data/synthetic/*.json
+data/synthetic/*.parquet
+
+# Generated outputs (temporary, can be regenerated)
+code/*.html
+code/plots/
+code/execution*.log
+code/pipeline*.log
+code/__pycache__/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+.ipynb_checkpoints/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+.env
+.env.local
+
+# Project-specific
+node_modules/
+.cache/
+
+# Keep documentation and source code in repo
+!README.md
+!*.py
+!requirements.txt
+!data/*.csv
+!litterature/*.pdf

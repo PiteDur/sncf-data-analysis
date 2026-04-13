@@ -1,0 +1,282 @@
+{
+  "document_metadata": {
+    "extraction_date": "2024-04-13",
+    "source_documents": [
+      "21.03.17_communique_aqst-causes_ter.pdf",
+      "bilan_ferroviaire_2023_essentiel-1.pdf"
+    ],
+    "purpose": "Extract delay causes, train distributions, and metrics for SNCF synthetic data generation"
+  },
+  
+  "delay_causes": {
+    "title": "Causes de Retard (Delay Causes) - TER 2016",
+    "source": "AQST (Autorité de la Qualité de Service dans les Transports)",
+    "year": 2016,
+    "geographic_scope": "National (France)",
+    "description": "First published comprehensive analysis of TER delay causes",
+    "unit": "percentage of total delay causes",
+    "causes": [
+      {
+        "name": "Externes au transport",
+        "percentage": 24.9,
+        "code": "EXT_TRANSPORT",
+        "description": "External causes including weather, track obstacles, suspicious packages, malice, and social movements"
+      },
+      {
+        "name": "Gestion de trafic",
+        "percentage": 19.4,
+        "code": "TRAFFIC_MGMT",
+        "description": "Traffic management issues affecting circulation on rail lines and network interactions"
+      },
+      {
+        "name": "Infrastructure",
+        "percentage": 16.0,
+        "code": "INFRASTRUCTURE",
+        "description": "Railway infrastructure issues including maintenance and works"
+      },
+      {
+        "name": "Gestion en gare et réutilisation de matériel",
+        "percentage": 15.0,
+        "code": "STATION_MGMT",
+        "description": "Station management and equipment reallocation including crew and material reassignment"
+      },
+      {
+        "name": "Transporteur ou matériel roulant",
+        "percentage": 12.4,
+        "code": "ROLLING_STOCK",
+        "description": "Operator or rolling stock issues"
+      },
+      {
+        "name": "Prise en compte voyageurs",
+        "percentage": 12.4,
+        "code": "PASSENGER_MGMT",
+        "description": "Passenger-related delays including crowd management, disabled persons, connections"
+      }
+    ],
+    "total_percentage": 100.1,
+    "regional_variation": {
+      "best_region": {
+        "name": "Grand Est",
+        "delay_rate_5min59s": "5.1%"
+      },
+      "worst_region": {
+        "name": "Provence-Alpes-Côte-d'Azur (PACA)",
+        "delay_rate_5min59s": "15.1%"
+      },
+      "note": "Geographic variation of 3x between best and worst regions"
+    },
+    "key_insights": [
+      "External causes are dominant despite being partially controllable",
+      "Best results obtained when all cause categories are simultaneously controlled",
+      "No strong correlation with traffic intensity",
+      "Regional factors appear significant in delay management"
+    ]
+  },
+
+  "train_type_distribution": {
+    "title": "Train Type Distribution - 2023",
+    "source": "Bilan Ferroviaire 2023 - Autorité de Régulation des Transports (ART)",
+    "year": 2023,
+    "geographic_scope": "National French railway network",
+    "unit": "billions of trains.km (unless otherwise specified)",
+    
+    "distribution_by_service_type": {
+      "total_trains_km": 386000000,
+      "comment": "Total railway traffic in 2023: 386 million trains.km",
+      "services": {
+        "TER": {
+          "trains_km": 195000000,
+          "percentage": 50.5,
+          "code": "TER",
+          "full_name": "Train Express Régional",
+          "description": "Regional express trains - highest frequency service type",
+          "employees_2023": 29000,
+          "growth_vs_2022": -3.0,
+          "growth_vs_2019": 0,
+          "note": "Most common train type for daily regional services"
+        },
+        "Transilien_and_RER": {
+          "trains_km": 75000000,
+          "percentage": 19.4,
+          "code": "TRANSILIEN",
+          "description": "Île-de-France suburban commuter services and RER",
+          "employees_2023": 14147,
+          "growth_vs_2022": -4.0,
+          "growth_vs_2019": -7.0,
+          "occupancy_rate": "35%",
+          "note": "Limited to Île-de-France region"
+        },
+        "TGV_and_SLO": {
+          "trains_km": 116000000,
+          "percentage": 30.1,
+          "code": "TGV",
+          "full_name": "Services Librement Organisés (Freely Organized Services)",
+          "description": "High-speed domestic TGV trains and international services",
+          "components": {
+            "TGV_domestique": "~55% of SLO",
+            "TGV_international": "~45% of SLO (Eurostar, Renfe, Trenitalia, etc.)"
+          },
+          "growth_vs_2022": -1.0,
+          "growth_vs_2019": -3.0,
+          "occupancy_rate": "77%",
+          "capacity_per_train": 544,
+          "note": "Highest occupancy rates but lower frequency"
+        },
+        "Intercités": {
+          "description": "Included with TER for aggregate analysis",
+          "note": "Long-distance regional services, often grouped with TER data"
+        }
+      }
+    },
+
+    "conventioned_vs_freely_organized": {
+      "conventioned": {
+        "trains_km": 270000000,
+        "percentage": 70.0,
+        "description": "Services with public service obligations (TER, Transilien, RER, Intercités)",
+        "components": {
+          "regional_ter": 195000000,
+          "ile_de_france": 75000000
+        },
+        "growth_vs_2022": -2.0,
+        "passenger_km": "39% of 107B passenger.km",
+        "occupancy_multiplier": "Lower occupancy (28-38%) but more frequent"
+      },
+      "freely_organized": {
+        "trains_km": 116000000,
+        "percentage": 30.0,
+        "description": "Commercial services (TGV, international)",
+        "occupancy_multiplier": "Higher occupancy (77%)",
+        "growth_vs_2022": -1.0,
+        "passenger_km": "61% of 107B passenger.km",
+        "note": "High-speed services with higher revenue but lower frequency"
+      }
+    },
+
+    "regional_distribution": {
+      "metric": "TER employment by region (2023) - proxy for service volume",
+      "total_ter_employees": 29000,
+      "distribution": [
+        {"region": "Île-de-France", "employees": 14147, "percentage": 48.8},
+        {"region": "Auvergne-Rhône-Alpes", "employees": 3291, "percentage": 11.3},
+        {"region": "Grand Est", "employees": 3134, "percentage": 10.8},
+        {"region": "Hauts-de-France", "employees": 2527, "percentage": 8.7},
+        {"region": "Nouvelle-Aquitaine", "employees": 2389, "percentage": 8.2},
+        {"region": "Occitanie", "employees": 2175, "percentage": 7.5},
+        {"region": "Provence-Alpes-Côte-d'Azur", "employees": 1654, "percentage": 5.7},
+        {"region": "Normandie", "employees": 1605, "percentage": 5.5},
+        {"region": "Bourgogne-Franche-Comté", "employees": 1552, "percentage": 5.3},
+        {"region": "Centre-Val de Loire", "employees": 1125, "percentage": 3.9},
+        {"region": "Pays de la Loire", "employees": 925, "percentage": 3.2}
+      ],
+      "note": "Can be used as weights for regionalized data generation"
+    },
+
+    "occupancy_and_capacity": {
+      "metrics": {
+        "average_seats_per_train": 544,
+        "average_occupancy_rate": "51%",
+        "average_passengers_per_train": 277
+      },
+      "by_service_type": {
+        "SLO": {
+          "occupancy": "77%",
+          "average_passengers": "~419 per train",
+          "type": "High-speed trains"
+        },
+        "TER_long_distance": {
+          "occupancy": "38%",
+          "average_passengers": "~206 per train",
+          "type": "Long-distance regional (100+ km)"
+        },
+        "TER_proximity": {
+          "occupancy": "28%",
+          "average_passengers": "~152 per train",
+          "type": "Short-distance regional (<100 km)"
+        },
+        "Transilien_RER": {
+          "occupancy": "35%",
+          "average_passengers": "~190 per train",
+          "type": "Suburban commuter"
+        }
+      }
+    },
+
+    "passenger_distribution": {
+      "total_passengers_km_2023": 107000000000,
+      "by_service": {
+        "SLO": {
+          "percentage": 61,
+          "passengers_km": 65270000000,
+          "description": "Freely organized services (TGV, international)"
+        },
+        "TER_and_Intercités": {
+          "percentage": 24,
+          "passengers_km": 25680000000,
+          "growth_vs_2019": 21,
+          "description": "Regional services showing strong recovery"
+        },
+        "Transilien_RER": {
+          "percentage": 15,
+          "passengers_km": 16050000000,
+          "growth_vs_2019": -9,
+          "description": "Île-de-France suburban, still below pre-pandemic"
+        }
+      }
+    },
+
+    "key_metrics_2023": {
+      "total_trains_km": 386000000,
+      "total_seats_km": 210000000000,
+      "total_passengers_km": 107000000000,
+      "average_occupancy": "51%",
+      "demand_increase_vs_2022": 5,
+      "demand_increase_vs_2019": 8,
+      "social_movement_impact": "March 2023 saw 8-15% decrease in monthly frequency"
+    }
+  },
+
+  "delay_statistics": {
+    "title": "Current Delay Statistics (2023)",
+    "freight_trains": {
+      "delay_30min": 16.7,
+      "delay_15min": 31.2,
+      "delay_5min": 55.0,
+      "trend": "Degradation of 0.8 points vs 2022"
+    },
+    "passenger_trains": {
+      "note": "Degradation for all services except international",
+      "delayed_hours": "More pronounced during peak hours",
+      "cause_distribution": "Stable, ~50% operator, 50% infrastructure"
+    }
+  },
+
+  "recommendations_for_data_generation": {
+    "delay_causes": {
+      "use_distribution": "DELAY_CAUSES_NATIONAL_2016",
+      "adjustment": "Consider slight increase for 'Externes au transport' due to climate change",
+      "temporal_pattern": "Higher frequency during peak hours and bad weather"
+    },
+    "train_types": {
+      "primary_split": {
+        "conventioned": 0.70,
+        "freely_organized": 0.30
+      },
+      "secondary_split_conventioned": {
+        "TER": 0.722,
+        "Transilien_RER": 0.278
+      },
+      "regional_weights": "Use employee distribution as proxy",
+      "occupancy_override": "Use service-type-specific occupancy rates"
+    },
+    "passenger_patterns": {
+      "peak_hours": "Higher occupancy, more delays",
+      "off_peak": "Lower occupancy, more delays per train (cause: service optimization)",
+      "growth_trend": "5% annual increase in ridership post-2022"
+    },
+    "delay_generation": {
+      "method": "Use AQST cause distribution + regional variation factors",
+      "validation": "Compare generated delay patterns to 2023 metrics if detailed data available"
+    }
+  }
+}
