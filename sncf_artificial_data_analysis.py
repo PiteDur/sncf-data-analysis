@@ -15,7 +15,8 @@ OBJECTIVE:
 PACKAGES
 """
 
-
+import pandas as pd
+import numpy as np
 
 
 
@@ -27,10 +28,22 @@ PACKAGES
 DATA AND PATHS
 """
 
+path_data = "data/synthetic/"
 
+df = pd.read_parquet(path_data + "train_delays_synthetic_2025_2026.parquet")
 
 
 
 """
 DESCRITPIVE STATISTICS
 """
+
+
+
+
+
+
+
+
+
+
